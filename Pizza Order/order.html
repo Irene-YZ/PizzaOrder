@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit</title>
+    <!--<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>-->
+    <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">-->
+   <link rel="apple-touch-icon" sizes="57x57" href="images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
+<link rel="manifest" href="images/icon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="images/icon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    <script>
+        var query = window.location.search;
+        // Skip the leading ?, which should always be there,
+        // but be careful anyway
+        if (query.substring(0, 1) == '?') {
+            query = query.substring(1);
+        }
+        var data = query.split(',');
+        for (i = 0; (i < data.length) ; i++) {
+            data[i] = unescape(data[i]);
+        }
+    </script>
+    <script>
+        window.onload = init;
+        function init() {
+            var button = document.getElementById("showInfo");
+            button.onclick = handleButtonClick;
+        }
+        function handleButtonClick(e) {
+
+            var name = document.getElementById("fullname");
+            name = name.value;
+
+            var address = document.getElementById("address");
+            address = address.value;
+            var city = document.getElementById("city");
+            city = city.value;
+            var state = document.getElementById("state");
+            state = state.value;
+            var zipcode = document.getElementById("zipcode");
+            zipcode = zipcode.value;
+            var phone = document.getElementById("phone");
+            phone = phone.value;
+            var bday = document.getElementById("bday");
+            bday = bday.value;
+            var email = document.getElementById("email");
+            email = email.value;
+            var card = document.getElementById("card");
+            card = card.value;
+            var num = document.getElementById("num");
+            num = num.value;
+
+            var exp = document.getElementById("exp");
+            exp = exp.value;
+
+           
+            document.write(
+                data[0] + "     $ " + data[1] + " X " + data[2] + "<br>" +
+                data[3] + "     $ " + data[4] + " X " + data[5] + "<br>" +
+                data[6] + "        $ " + data[7] + " X " + data[8] + "<br>" +
+                "Total:             $ " + data[9]
+            + "<br>Name:   " + name + "<br>Address:    " + address + "<br>City:     "
+            + city + "<br>State:     " + state + "<br>ZipCode:    " + zipcode + "<br>Phone:   "
+            + phone + "<br>Delivery Date: " + bday + "<br>email:    "
+            + email + "<br>Credit Card Type:   " + card + "<br>Card Number:   " + num + "<br>Expire:   " + exp);
+                            }
+    </script>
+    
+</head>
+<body>
+
+    <div data-role="page">
+        <div data-role="header">
+            <h1>Check Out</h1>
+        </div>
+
+        <div data-role="content">
+            <form>
+                <div data-role="fieldcontain">
+                    <label for="fullname">Full name:</label>
+                    <input type="text" name="fullname" id="fullname" /><br/>
+                    <label for="address">Address:</label>
+                    <input type="text" name="address" id="address" /><br />
+                    <label for="city">City:</label>
+                    <input type="text" name="city" id="city" /><br />
+                    <label for="state">State:</label>
+                    <input type="text" name="state" id="state" /><br />
+                    <label for="zipcode">Zip Code:</label>
+                    <input type="text" name="zipcode" id="zipcode" /><br />
+                    <label for="phone">Phone:</label>
+                    <input type="tel" name="phone" id="phone" /><br />
+                    <label for="bday">Date of Delivery:</label>
+                    <input type="date" name="bday" id="bday" /><br />
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Your email.."/><br />
+                    <label for="card">Credit Card:</label>
+                    <input type="text" name="card" id="card" placeholder="Card Type: " /><br />       
+                    <label for="num">Card Number:</label>
+                    <input type="text" name="num" id="num" placeholder="Card number: "/><br />
+                    <label for="exp">Empire: </label>
+                    <input type="date" name="expire" id="exp"/><br />
+  
+                   </div>
+                <input type="button" data-inline="true" name="button" id="showInfo" onclick="init()" value="Submit">
+               
+               
+            </form>
+        </div>
+
+            <script>
+                for (i = 0; (i < data.length) ; i++) {
+                    document.write("<li>" + data[i] + "</li>\n");
+                }
+            </script>
+      
+    </div>
+  
+</body>
+</html>

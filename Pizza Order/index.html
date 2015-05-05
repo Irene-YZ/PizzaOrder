@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Pizza Pi</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="layout.css" media="all and (min-width: 481px)" />
+<link rel="apple-touch-icon" sizes="57x57" href="images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
+<link rel="manifest" href="images/icon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="images/icon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body style="background-color:#d7fc7a">
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="index.html">Join Us Now</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1 >PIZZA PI</h1>
+    </header>
+    <!--
+    <div class="container">
+        <div class="header" style="width: 90%; height: 300px; background-image: url(images/pizza7.jpg)">-->
+           
+            <!--<p style="color:white; float:right">
+                Adress: 23421 Broadway ave <br />
+                City:   San Jose <br />
+                State:  CA 94123 <br />
+                phone: 1234567879
+            </p>
+        </div>
+            
+-->
+    <div>
+        <div id="pizza" >
+            <img class="mybox1" src="images/pizza1.jpg" alt="Pizza Pi.">
+            <img class="mybox2" src="images/pizza2.jpg" alt="Pizza Pi.">
+            <img class="mybox3" src="images/pizza3.jpg" alt="Pizza Pi.">
+            <img class="mybox4" src="images/pizza4.jpg" alt="Pizza Pi.">
+
+            <button onclick=" window.location.href='select.html' ">Order</button>
+        </div>
+        <aside id="visit" class="column">
+            <div>
+                <h2>Visit Us!</h2>
+                <dl>
+                    <dt>Location</dt>
+                    <dd>
+                        <br />
+                        2450 Stevenson Blvd
+                        Fremont, CA 94538
+                    </dd>
+
+                    <dt>Hours</dt>
+                    <dd>
+                        <dl>
+                            <dt>M-F</dt>
+                            <dd>Until midnight</dd>
+                            <dt>Sa-Su</dt>
+                            <dd>
+                                Until 12AM*<p><em><small>*At least</small></em></p>
+                            </dd>
+                        </dl>
+                    </dd>
+                    <dt>Call us</dt>
+                    <dd>+1 (510) 123-4567</dd>
+                </dl>
+            </div>
+            <div>
+                <script>
+                    document.write("<h2>Menu</h2>");
+
+                    var pizza1 = new Object();
+                    pizza1.name = "Pepperoni";
+                    pizza1.small = 8.99;
+                    pizza1.medium = 9.99;
+                    pizza1.large = 10.99;
+
+                    document.write("<h3> " + pizza1.name + "</h3>" + " Small: " + pizza1.small + " Medium: " + pizza1.medium + " Large: " + pizza1.large + "<br>");
+                    var pizza2 = new Object();
+                    pizza2.name = "Vegetarian";
+                    pizza2.small = 9.99;
+                    pizza2.medium = 10.99;
+                    pizza2.large = 11.99;
+
+                    document.write("<h3> " + pizza2.name + "</h3>" + " Small: " + pizza2.small + " Medium: " + pizza2.medium + " Large: " + pizza2.large + "<br>");
+                    var pizza3 = new Object();
+                    pizza3.name = "Combo";
+                    pizza3.small = 10.99;
+                    pizza3.medium = 11.99;
+                    pizza3.large = 12.99;
+                    document.write("<h3> " + pizza3.name + "</h3>" + " Small: " + pizza3.small + " Medium: " + pizza3.medium + " Large: " + pizza3.large + "<br>");
+                </script>
+            </div>
+            <div id="mapcontainer">
+                <br />
+                <br />
+                <p id="maplink">
+                    <a href="http://goo.gl/maps/m8Rfh">View Google Map</a>
+                </p>
+            </div>
+            <!--<iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Alameda+County+Library&amp;sll=37.533198,-121.94296&amp;sspn=0.459566,0.98877&amp;ie=UTF8&amp;hq=Alameda+County+Library&amp;hnear=&amp;ll=37.550849,-121.971097&amp;spn=0.114871,0.247192&amp;t=m&amp;z=13&amp;iwloc=A&amp;cid=16666719424861724039&amp;output=embed"></iframe><br /><small><a href="https://www.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Alameda+County+Library&amp;sll=37.533198,-121.94296&amp;sspn=0.459566,0.98877&amp;ie=UTF8&amp;hq=Alameda+County+Library&amp;hnear=&amp;ll=37.550849,-121.971097&amp;spn=0.114871,0.247192&amp;t=m&amp;z=13&amp;iwloc=A&amp;cid=16666719424861724039" style="color:#0000FF;text-align:left">View Larger Map</a></small>-->
+
+        </aside>
+
+    </div>
+
+    <footer>
+        <p>See you soon!</p>
+    </footer>
+
+    <!--for switch screen to mobile-->
+    <script type="text/javascript">
+       var breakpoint = 481,
+    id = 'mapcontainer',
+    viewportWidth = window.innerWidth; if (viewportWidth > breakpoint) {
+	        var mapElement = document.createElement('iframe');
+        mapElement.id = 'map';
+	        mapElement.src = 'https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Alameda+County+Library&sll=37.533198,-121.94296&sspn=0.459566,0.98877&ie=UTF8&hq=Alameda+County+Library&hnear=&ll=37.550849,-121.971097&spn=0.114871,0.247192&t=m&z=13&iwloc=A&cid=16666719424861724039&output=embed';
+        //mapElement.src = 'http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Northwestern+Polytechnic,+Westinghouse+Drive,+Fremont,+CA&aq=1&oq=northwster&sll=37.269174,-119.306607&sspn=14.636891,21.313477&ie=UTF8&hq=&hnear=&t=m&iwloc=A&ll=37.477866,-121.925208&spn=0.006295,0.006295&output=embed';
+
+        document.getElementById(id).insertBefore(mapElement, maplink);
+	    }
+    </script>
+
+
+
+</body>
+</html>

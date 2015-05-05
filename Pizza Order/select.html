@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>select</title>
+  
+    <!--[if (lt IE 9)&(!IEMobile)]> <link rel="stylesheet" type="text/css" href="layout.css" media="all" /><![endif]-->
+    <!--<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>-->
+	<link rel="apple-touch-icon" sizes="57x57" href="images/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
+<link rel="manifest" href="images/icon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="images/icon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    <script>
+       window.onload = init;
+       var $ = function (id) {
+           return document.getElementById(id);
+       }
+       function init() {
+           var button = document.getElementById("showOrder");
+           button.onclick = handleButtonClick;
+       }
+       function handleButtonClick(e) {
+           var pizza1 = document.getElementById("pizza1");
+           pizza1 = pizza1.value;
+           var size1 = document.getElementById("size1");
+           size1 = size1.value;
+           var number1 = document.getElementById("number1");
+           number1 = number1.value;
+
+           var pizza2 = document.getElementById("pizza2");
+           pizza2 = pizza2.value;
+           var size2 = document.getElementById("size2");
+           size2 = size2.value;
+           var number2 = document.getElementById("number2");
+           number2 = number2.value;
+
+           var pizza3 = document.getElementById("pizza3");
+           pizza3 = pizza3.value;
+           var size3 = document.getElementById("size3");
+           size3 = size3.value;
+           var number3 = document.getElementById("number3");
+           number3 = number3.value;
+           var output = pizza1 + ": $ " + size1 + "/each   quant: " + number1 +
+           pizza2 + ": $ " + size2 + "/each   quant: " + number2 +
+           pizza3 + ": $ " + size3 + "/each   quant: " + number3;
+           //  alert(output);
+           var total = size1 * number1 + size2 * number2 + size3 * number3;
+           window.data = new Array();
+           data[0] = pizza1;
+           data[1] = size1;
+           data[2] = number1;
+           data[3] = pizza2;
+           data[4] = size2;
+           data[5] = number2;
+           data[6] = pizza3;
+           data[7] = size3;
+           data[8] = number3;
+           data[9] = total;
+
+       
+           $("total").value = total.toFixed(2);
+           $("total").onclick = total;
+           $("total").focus();
+           
+          
+       }
+
+
+   </script>
+    <!--<script>
+        var data = new Array();
+        data[0] = "pizza1";
+        data[1] = "size1";
+        data[2] = "number1";
+
+       
+    </script>-->
+    <script>
+        function sendData() {
+            // Initialize packed or we get the word 'undefined'   
+            var order ="";
+          
+            for (i = 0; (i < data.length) ; i++) {
+                if (i > 0) {
+                    order += ",";
+                }
+                order += escape(data[i]);
+            }
+            window.location = "order.html?" + order;
+        }
+    </script>
+
+</head>
+<body>
+
+    <div data-role="page">
+        <div data-role="header">
+            <h1>Select Pizza</h1>
+        </div>
+
+        <div data-role="content">
+            <form>
+                <fieldset data-role="fieldcontain">
+                    <input type="radio" name="pepperoni" id="pizza1" value="pepperoni">Pepperoni<br />
+                    <select id="size1">
+                        <option value="8.99">Small: $ 8.99</option>
+                        <option value="9.99">Medium: $ 9.99</option>
+                        <option value="10.99">Large: $ 10.99</option>
+                    </select> <br />
+                    <input type="number" name="quantity1" id="number1" min="0" max="50"> <br /><br />
+
+                    <input type="radio" name="vegetarian" id="pizza2" value="vegetarian">Vegetarian<br />
+                    <select id="size2">
+                        <option value="9.99">Small: $ 9.99</option>
+                        <option value="10.99">Medium: $ 10.99</option>
+                        <option value="11.99">Large: $ 11.99</option>
+                    </select> <br />
+                    <input type="number" name="quantity2" id="number2" min="0" max="50"><br /><br />
+
+                    <input type="radio" name="combo" id="pizza3" value="combo">Combo<br />
+
+                    <select id="size3">
+                        <option value="10.99">Small: $ 10.99</option>
+                        <option value="11.99">Medium: $ 11.99</option>
+                        <option value="12.99">Large: $ 12.99</option>
+                    </select> <br />
+
+                    <input type="number" name="quantity3" id="number3" min="0" max="50"><br /><br />
+                    
+                    Total: (tax 0.0%)<br />
+                    <input type="text" id="total" disabled /> <br />
+                </fieldset>
+                <input type="button" name="button" id="showOrder" onclick="init()" value=" show order">
+                <input type="reset" name="reset" value="Reset"/><br />
+               
+
+                </form>
+            <a href="javascript:sendData();" 
+               data-role="button"
+               data-icon="arrow-r"
+               data-iconpos="right"
+               data-transition="fade"
+               target="_blank">Check Out</a>
+
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+.mybox1 { 
+   border-color: black;
+   border-width: 2px;
+   border-style: solid;
+   background-color: blue;
+   padding: 2%;
+   margin: 5%;
+   width: 30%;
+}
+.mybox2 { 
+   border-color: black;
+   border-width: 2px;
+   border-style: solid;
+   background-color: yellow;
+   padding: 2%;
+   margin: 5%;
+   margin-left: 5%;
+   width: 30%;
+}
+.mybox3 { 
+   border-color: black;
+   border-width: 2px;
+   border-style: solid;
+   background-color: green;
+   padding: 2%;
+   margin: 5%;
+   width: 30%;
+}
+.mybox4 { 
+   border-color: black;
+   border-width: 2px;
+   border-style: solid;
+   background-color: red;
+   padding:2%;
+   margin: 5%;
+   margin-left: 5%;
+   width: 30%;
+}
+
+
+.mybox5 { 
+   border-color: white;
+   border-width: 2px;
+   border-style: solid;
+   background-color: white;
+   padding: 10%;
+   margin: 10%;
+   width: 10%;
+}
