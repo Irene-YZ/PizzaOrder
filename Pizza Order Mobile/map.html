@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>map</title>
+    <link rel="stylesheet" href="css/jquery-mobile-theme/themes/pizzapimobile.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+</head>
+<body>
+    <div id="home" data-role="page" data-theme="a">
+        <div data-role="header" data-position="fixed">
+            <h1> Pizza Pi</h1>
+            <a href="mobileindex.html" data-icon="home" data-transition="fade">Home</a>
+        </div>
+
+        <div id="mapcontainer">
+            <br />
+            <br />
+            <p id="maplink">
+                <!--<a href="http://goo.gl/maps/m8Rfh">View Google Map</a><br/>-->
+                <a href="http://goo.gl/gVHNru">Google map: Fremont Central Park</a>
+            </p>
+        </div>
+        <script type="text/javascript">
+            var breakpoint = 300,
+         id = 'mapcontainer',
+         viewportWidth = window.innerWidth; if (viewportWidth > breakpoint) {
+             var mapElement = document.createElement('iframe');
+             mapElement.id = 'map';
+             mapElement.src = 'https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Alameda+County+Library&sll=37.533198,-121.94296&sspn=0.459566,0.98877&ie=UTF8&hq=Alameda+County+Library&hnear=&ll=37.550849,-121.971097&spn=0.114871,0.247192&t=m&z=13&iwloc=A&cid=16666719424861724039&output=embed';
+             document.getElementById(id).insertBefore(mapElement, maplink);
+         }
+        </script>
+       
+        <div data-role="footer"
+             data-position="fixed">
+            <h1>Tel:513 456-7890 </h1>
+        </div><!-- footer -->
+      
+        </div>
+</body>
+</html>
